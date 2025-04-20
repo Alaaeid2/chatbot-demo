@@ -1,0 +1,38 @@
+{
+    "name": "AI Assistant",
+    "description": "An AI assistant using MCP with conversation memory",
+    "model": {
+        "provider": "groq",
+        "name": "qwen-qwq-32b",
+        "parameters": {
+            "temperature": 0.7,
+            "max_tokens": 1000
+        }
+    },
+    "conversation": {
+        "memory_enabled": true,
+        "max_turns": 15
+    },
+    "mcpServers": {
+      "playwright": {
+        "command": "npx",
+        "args": [
+          "@playwright/mcp@latest"
+        ]
+      },
+      "airbnb": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@openbnb/mcp-server-airbnb"
+      ]
+    },
+    "duckduckgo-search": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "duckduckgo-mcp-server"
+        ]
+    }
+    }
+  }
